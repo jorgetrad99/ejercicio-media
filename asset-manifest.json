@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ejercicio-media/static/css/main.cfc84ddd.chunk.css",
+    "main.js": "/ejercicio-media/static/js/main.1388b3b3.chunk.js",
+    "main.js.map": "/ejercicio-media/static/js/main.1388b3b3.chunk.js.map",
+    "runtime-main.js": "/ejercicio-media/static/js/runtime-main.8ab78b56.js",
+    "runtime-main.js.map": "/ejercicio-media/static/js/runtime-main.8ab78b56.js.map",
+    "static/js/2.8a8ec4af.chunk.js": "/ejercicio-media/static/js/2.8a8ec4af.chunk.js",
+    "static/js/2.8a8ec4af.chunk.js.map": "/ejercicio-media/static/js/2.8a8ec4af.chunk.js.map",
+    "static/js/3.0048c277.chunk.js": "/ejercicio-media/static/js/3.0048c277.chunk.js",
+    "static/js/3.0048c277.chunk.js.map": "/ejercicio-media/static/js/3.0048c277.chunk.js.map",
+    "index.html": "/ejercicio-media/index.html",
+    "static/css/main.cfc84ddd.chunk.css.map": "/ejercicio-media/static/css/main.cfc84ddd.chunk.css.map",
+    "static/js/2.8a8ec4af.chunk.js.LICENSE.txt": "/ejercicio-media/static/js/2.8a8ec4af.chunk.js.LICENSE.txt",
+    "static/media/formula.0aaebedc.svg": "/ejercicio-media/static/media/formula.0aaebedc.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8ab78b56.js",
+    "static/js/2.8a8ec4af.chunk.js",
+    "static/css/main.cfc84ddd.chunk.css",
+    "static/js/main.1388b3b3.chunk.js"
+  ]
+}
