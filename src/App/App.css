@@ -91,3 +91,13 @@ button {
   overflow-x: scroll;
   height: 4rem;
 }
+
+#container-line {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  display: flex;
+  justify-content: center;
+}
