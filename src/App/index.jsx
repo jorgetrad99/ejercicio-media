@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 
 function App() {
-  const [ array, setArray] = React.useState([]);
+  const [ array, setArray] = useState([]);
+
 
   const randomArray = () => {
     const amountOfNumbers = Math.floor(Math.random() * (30 - 5) + 5);
@@ -15,13 +16,18 @@ function App() {
   }
 
   const addNumber = () => {
-    const element = document.getElementById("intro");
-    let provisionalArray = array;
-    /* provisionalArray.push */
+    const input = Number(document.getElementById("add-number-input").value);
+    console.log(input);
+    setArray( oldArray => [...oldArray, input]);
+    /* let provisionalArray = array;
+    provisionalArray.push(input);
+    console.log(`ArrayB: ${provisionalArray}`);
+    setArray(provisionalArray); */
+    console.log(array);
   }
 
-  React.useEffect(() => {
-    console.log('Hola');
+  useEffect(() => {
+    console.log(array);
   }, [array]);
 
   return (
@@ -36,13 +42,14 @@ function App() {
           <div className="container-input">
             <div>
               <input type="number" id="add-number-input" placeholder="Type a number..." />
-              <button type="button">Add number</button>
+              <button type="button" onClick={addNumber}>Add number</button>
             </div>
           </div>
-          <p>Array: {JSON.stringify(array)}</p>
+          <p>Array:</p>
           <br />
+          <p className="showing-array">{JSON.stringify(array)}</p>
+          
           <button>Calculate</button>
-          <br />
           <br />
           
           <h2>Calculated sample variance:</h2>
