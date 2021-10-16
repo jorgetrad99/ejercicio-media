@@ -1,10 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   background-color: #282c34;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
 }
 
 .App {
   text-align: center;
   color: white;
+  min-width: 360px;
 }
 
 .App-logo {
@@ -19,4 +32,56 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.container-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.container-input div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 34rem;
+  height: 6rem;
+
+  border-style: solid;
+  border-color: #e5e5e9;
+  border-width: 0.01rem;
+  border-radius: 5rem 5rem 5rem 5rem;
+  border-width: 0.15rem;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container-input div input {
+  color: white;
+  font-size: 2rem;
+  background-color: inherit;
+  border: none;
+  margin: 0 1rem;
+  width: 90%;
+  height: 100%;
+}
+
+#add-number-input:focus {
+  outline: none;
+}
+
+button {
+  font-size: 1.1rem;
+  border-color: #e5e5e9;
+  border-width: 0.1rem;
+  color: white;
+  font-size: 1.2rem;
+  margin: 1rem 0.7rem;
+  background-color: #1bc3ee;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 10rem;
+  height: 3rem;
 }
