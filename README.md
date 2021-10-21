@@ -2,6 +2,8 @@
 
 In this exercise you will have to find the sample variance of an array of numbers. For this exercise you will receive a series or an array of numbers and based on these you will have to use the formula of the sample mean to obtain the mean of the data.
 
+You can view the project deployed <a href="https://jorgetrad99.github.io/sample-variance-excercise/">here</a>
+
 ## Description
 
 As well mentioned, the idea of this exercise is that given a series of numbers you are able to apply the formula of the mean which is given by the following equation:
