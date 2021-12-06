@@ -116,7 +116,7 @@ function App() {
               <p>Number of the Terms: {result.amountOfNumbers}</p>
               <br />
               <h3>Calculated sample variance:</h3>
-              <p>{result.sumOfNumbers / result.amountOfNumbers}</p>
+              <p>{(result.sumOfNumbers / result.amountOfNumbers).toFixed(2)}</p>
               <br />
             </React.Fragment>
           }
