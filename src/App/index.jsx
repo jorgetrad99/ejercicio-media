@@ -26,7 +26,7 @@ function App() {
       blankResultField();
     }
     const amountOfNumbers = Math.floor(Math.random() * (30 - 5) + 5);
-    console.log(amountOfNumbers);
+    /* console.log(amountOfNumbers); */
     let provisionalArray = [];
     for(let i = 0; i < amountOfNumbers; i ++) {
       provisionalArray.push(Math.floor(Math.random() * 100));
@@ -34,17 +34,33 @@ function App() {
     setArray(provisionalArray);
   }
 
+  const resetArray = () => {
+    setArray([]);
+    blankResultField();
+  }
+
   const addNumber = () => {
-    if(result.amountOfNumbers !== null && result.sumOfNumbers !== null) {
-      blankResultField();
-    }
-    const input = Number(document.getElementById("add-number-input").value);
-    if(input >= 0){
-      setArray( oldArray => [...oldArray, input]);
+    const input = document.getElementById("add-number-input").value;
+    if(input) {
+      const number = Number(input);
+      if(number >= 0){
+        setArray( oldArray => [...oldArray, number]);
+      } else {
+        alert('Negative numbers are not allowed');
+      }
+      blankInputFiled();
     } else {
-      alert('Negative numbers are not allowed');
+      alert('Type a number');
     }
-    blankInputFiled();
+  }
+
+  const popArrayElement = () => {
+    console.log('Array original: ' + array)
+    array.pop();
+    const popedArray = array;
+    console.log('Array popeado: ' + popedArray)
+    setArray(() => [...popedArray]);
+    console.log('Nuevo Array: ' + array);
   }
 
   const calculateSampleVariance = () => {
@@ -53,9 +69,6 @@ function App() {
         return preValue + currentValue;
       })
       const amountOfNumbers = array.length;
-  
-      console.log(`Suma: ${sumOfNumbers}`);
-      console.log(`Cantidad de numeros: ${amountOfNumbers}`);
 
       setResult({
         amountOfNumbers: amountOfNumbers,
@@ -81,6 +94,8 @@ function App() {
         <main>
           <p>Let's Calculate the sample variance of an array of numbers.</p>
           <button type="button" onClick={randomArray}>Random Array</button>
+          <button type="button" onClick={resetArray}>Reset Array</button>
+          <button type="button" onClick={popArrayElement}>Pop last element</button>
           <div className="container-input">
             <div>
               <input type="number" min="0" minLength="1" pattern="[0-9]*" id="add-number-input" placeholder="Type a number..." required />
@@ -90,10 +105,12 @@ function App() {
           <p>Array:</p>
           <br />
           <p className="showing-array">{JSON.stringify(array)}</p>
-          {/*  */}
           
-          { array.length !== 0 && 
-              <button type="button" onClick={calculateSampleVariance}>Calculate</button>
+          { 
+            (array.length !== 0) && 
+              <button type="button" onClick={calculateSampleVariance}>
+                Calculate
+              </button>
           }
           
           
